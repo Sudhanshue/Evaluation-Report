@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const FilterPopup = ({ filters, onFilterChange, closePopup }) => {
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseLeave = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.relatedTarget)) {
+        closePopup();
+      }
+    };
+
+    const filterBox = popupRef.current;
+
+    if (filterBox) {
+      filterBox.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    return () => {
+      if (filterBox) {
+        filterBox.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    };
+  }, [closePopup]);
+
   return (
-    <div className="filterBoxWrapper">
+    <div className="filterBoxWrapper" ref={popupRef}>
       <ul className="checkBoxes">
         <li>
           <label id="all">
@@ -29,7 +51,6 @@ const FilterPopup = ({ filters, onFilterChange, closePopup }) => {
           </li>
         ))}
       </ul>
-      <button onClick={closePopup}>Close</button>
     </div>
   );
 };
