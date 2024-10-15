@@ -1,0 +1,16 @@
+[ 
+    { 
+        "id": 1, 
+        "name": "Sanjeev Kumar", 
+        "evaluationStatus": "COMPLETED",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 2, 
+        "name": "Apporva Jain",
+        "evaluationStatus": "IN_PROGRESS",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }
+]

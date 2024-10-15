@@ -1,0 +1,86 @@
+[ 
+    { 
+        "id": 1, 
+        "name": "John Doe", 
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 2, 
+        "name": "Jane Doe",
+        "evaluationStatus": "IN_PROGRESS",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 3, 
+        "name": "Bill Doe", 
+        "evaluationStatus": "COMPLETED",
+        "startDate": 1724835720000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 4, 
+        "name": "Abraham Lincoln", 
+        "evaluationStatus": "EXPIRED",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 5, 
+        "name": "Bill Gates",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724835720000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 6, 
+        "name": "Steve Jobs", 
+        "evaluationStatus": "COMPLETED",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 7, 
+        "name": "Bill Clinton", 
+        "evaluationStatus": "EXPIRED",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 8, 
+        "name": "Joe Biden",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 9, 
+        "name": "Kamala Harris",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 10, 
+        "name": "Queen Elizabeth",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747880000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    }, 
+    { 
+        "id": 11, 
+        "name": "Bob Doe",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    },
+    { 
+        "id": 12, 
+        "name": "Sudhanshu Kumar",
+        "evaluationStatus": "YET_TO_START",
+        "startDate": 1724747940000,
+        "timeZone": "GMT+5:30 Asia/Kolkata"
+    } 
+]
