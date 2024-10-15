@@ -1,0 +1,196 @@
+/* styles.css */
+*,::before,::after{padding:0;margin:0;box-sizing:border-box}
+body{overflow:hidden;overflow-y:auto;color:#666;font-size:14px;line-height:24px;background:#fff}
+body,ul,ol,li,h1,h2,h3,h4,h5,h6,figure,p,strong,textarea{list-style:none;font-family:Arial,"sans-serif"}
+a,button,select{text-decoration:none;cursor:pointer}
+img:not([src]){opacity:0}
+table{border-collapse: collapse;}
+small{font-size:100%}
+.container{padding:0 15px;width:100%}
+.form-group{margin-bottom:15px}
+.img-responsive{max-width:100%;height:auto;max-height:100%}
+.form-control{padding:6px 12px;width:100%;height:48px;font-size:14px;color:#333;background:#fff;border-radius:8px;border:1px solid #e8e8e8;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}
+.btn{padding:0 25px;display:inline-flex;gap:8px;justify-content:center;align-items:center;border:1px solid transparent;font-size:14px;line-height:normal;border-radius:8px;height:48px;cursor:pointer}
+.btn-default{background:#2e6da4;color:#fff;border:#2e6da4 solid 1px}
+@media screen and (min-width: 1170px) {
+.container{width:1170px;margin:0 auto}
+}
+.evalutionBox{padding:50px 0;}
+.evalutionBox .mainHeading{font-size:24px; color: #000;}
+.evalutionBox .subHeading{font-size:16px; color: #333;}
+.evalutionBox .uploadBox{margin-top: 30px; display: flex; align-items: center;gap:20px; width:100%;}
+.evalutionBox .uploadBox .orLine{display: flex; align-items: center; justify-content: center;position:relative;flex:none;width:200px;}
+.evalutionBox .uploadBox .orLine::after{width: 100%;border:1px solid #eee;content:'';}
+.evalutionBox .uploadBox .orLine span{ background:#fff; padding:0 15px;position: absolute;z-index:2}
+.evalutionBox .uploadBox .uploadBtn{flex:none;}
+.evalutionBox .uploadBox .dragBox{height:150px;  width:100%; display: flex; align-items: center; justify-content: center; border:2px dotted #ccc;cursor:pointer; border-radius: 8px;}
+.evalutionBox .uploadBox .dragBox .dragText{display: flex; align-items: center; justify-content: center;flex-direction: column;}
+.evalutionBox .filterSearchBox{margin-top: 20px;max-width:500px;display: flex; align-items: center;gap:10px;}
+.evalutionBox .filterSearchBox .filterSearchInput{ position: relative;width:100%;}
+.evalutionBox .filterSearchBox .filterSearchInput .form-control{padding-right:50px; position: relative;width: 100%;}
+.evalutionBox .filterSearchBox .filterSearchInput em.search{position: absolute; right: 0; top: 0; bottom:0;width:50px;display: flex; align-items: center; justify-content: center;}
+.evalutionBox .filterSearchBox .filterBtnBox{flex:none;position: relative;}
+.evalutionBox .filterSearchBox .filterBtnBox .btn{background: none; border-color: #333;width:50px;padding: 0;}
+.evalutionBox .tableBox{margin-top: 20px;}
+.evalutionBox .table-responsive{width: 100%;max-width:900px; color:#333;}
+.evalutionBox .tableBox thead .pointer{cursor: pointer;}
+.evalutionBox .tableBox td,.evalutionBox .tableBox th{padding:8px;border:1px solid #e8e8e8;}
+.evalutionBox .tableBox thead{background:#eee;}
+.evalutionBox .tableBox .name{display: flex; align-items: center;gap:10px;}
+.evalutionBox .tableBox .name figure{display: flex; align-items: center;width:30px; height:30px; overflow: hidden; border-radius: 100%;background:#eee;}
+.evalutionBox .tableBox .status span{padding:5px 15px; background:#eee;color:#000;border-radius:25px;font-size: 12px}
+.evalutionBox .tableBox .status.start span{background:rgba(24, 151, 166,.2);}
+.evalutionBox .tableBox .status.progress span{background:rgba(51, 51, 51,.2);}
+.evalutionBox .tableBox .status.completed span{background: rgba(19, 135, 75, .2);}
+.evalutionBox .tableBox .status.expired span{background: rgba(255, 87, 34, .2);}
+.evalutionBox .tableBox .arrow{margin-left:5px; width:12px;display: inline-flex;position: relative;transform:rotate(90deg);transition: .3s;}
+.evalutionBox .tableBox .arrow.up{transform:rotate(-90deg)}
+.selected-filters{
+	margin-top: 20px;
+}
+
+.clr{color:#fff;display:flex;display:-webkit-flex;align-items:center;justify-content:center;width:100%;height:100%;overflow:hidden;font-size:12px}
+.clr0{background:#ccc}
+.clr1{background:#c41915}
+.clr2{background:#ca4318}
+.clr3{background:#ec6c20}
+.clr4{background:#fd8a26}
+.clr5{background:#9aca28}
+.clr6{background:#c8b654}
+.clr7{background:#c79c38}
+.clr8{background:#ca7620}
+.clr9{background:#87b043}
+.clr10{background:#53a527}
+.clr11{background:#13874b}
+.clr12{background:#20aa66}
+.clr13{background:#66b393}
+
+
+
+.filterBoxWrapper {
+	border: 1px solid #e8e8e8;
+	width: 300px;
+	padding: 10px;
+	padding-top: 20px;
+	background-color: #fff;
+	position: absolute;
+	/* display: none; */
+}
+
+.filterBoxWrapper .filterBoxWrapperName {
+	font-size: 14px;
+	columns: #ddd;
+}
+
+.filterBoxWrapper ul {
+	margin-top: 10px;
+}
+
+.filterBoxWrapper ul li {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.filterBoxWrapper ul li:hover {
+	background-color: #fafafa;
+	color: #4a4a4a;
+}
+.filterBoxWrapper .checkBoxes {
+	margin-top: 0px;
+}
+.checkBoxes label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.popup {
+	position: absolute;
+	top: 50px; /* Adjust this to place the popup below the drag box */
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #4caf50; /* Green color for success */
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+	display: flex;
+	align-items: center;
+  }
+  
+  .popup::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 0 10px 10px 10px;
+	border-style: solid;
+	border-color: transparent transparent #4caf50 transparent;
+  }
+  
+  .popup p {
+	margin: 0;
+	font-weight: bold;
+  }
+  
+  .dragBox {
+	position: relative; /* This ensures the popup is positioned relative to the drag box */
+  }
+
+  .popup.error {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f44336; /* Red color for error */
+	color: white;
+	padding: 15px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+	display: flex;
+	align-items: center;
+  }
+  
+  .popup.error::before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 0 10px 10px 10px;
+	border-style: solid;
+	border-color: transparent transparent #f44336 transparent;
+  }
+  
+  .popup.error p {
+	margin: 0;
+	font-weight: bold;
+  }
+
+  .arrow {
+	margin-left: 5px;
+	display: inline-block;
+  }
+  
+  .arrow.up img {
+	transform: rotate(180deg); /* Rotate the image for ascending */
+  }
+  
+  .arrow.down img {
+	transform: rotate(0deg); /* Normal position for descending */
+  }
+  
+  
+  
+@media screen and (max-width:768px){
+	.evalutionBox .uploadBox{flex-direction:column;}
+	.evalutionBox .tableBox{padding: 0 15px; margin:20px -15px 0 -15px; overflow: auto;}
+	.evalutionBox .tableBox .table-responsive{min-width:500px;}
+	.evalutionBox .tableBox .name{white-space: nowrap;}
+	.evalutionBox .tableBox thead{white-space: nowrap;}
+}
