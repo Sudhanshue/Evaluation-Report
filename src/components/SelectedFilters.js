@@ -9,13 +9,20 @@ const SelectedFilters = ({ filters }) => {
     if (filters.completed) selectedFilters.push("Completed");
     if (filters.expired) selectedFilters.push("Expired");
 
-    return selectedFilters.length > 0 ? selectedFilters.join(", ") : "No filters selected";
+    return selectedFilters ;
   };
 
   return (
     <div className="selected-filters">
-      <strong>Evaluation Status: </strong>{getSelectedFilters()}
+    <strong>Evaluation Status: </strong>
+    <div className="selected-filters-options">
+      {getSelectedFilters().map((filter, index) => (
+        <div key={index} className="filter-box">
+          {filter}
+        </div>
+      ))}
     </div>
+  </div>
   );
 };
 

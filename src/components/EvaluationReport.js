@@ -41,7 +41,6 @@ const EvaluationReport = () => {
               )
             ) {
               setJsonData(parsedData);
-              console.log("::::::::::",Object.keys(parsedData[0]));
               setKeys(Object.keys(parsedData[0]));
               setPopupMessage("JSON file uploaded successfully!");
               setPopupType("success");
@@ -77,7 +76,6 @@ const EvaluationReport = () => {
     
     const sortedData = React.useMemo(() => {
       if (!jsonData) return [];
-      console.log("ssssss",sortConfig);
       
       if (!sortConfig) return jsonData;
       let sortableData = [...jsonData];
@@ -120,8 +118,10 @@ const EvaluationReport = () => {
       if (!jsonData) return [];
       return sortedData.filter((item) => {
         const matchesSearchTerm =
-          item.name.toLowerCase().includes(searchTerm) ||
-          item.evaluationStatus.toLowerCase().includes(searchTerm);
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (item.evaluationStatus === "YET_TO_START" && "YET TO START".toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (item.evaluationStatus === "IN_PROGRESS" && "IN PROGRESS".toLowerCase().includes(searchTerm.toLowerCase())) ||
+        item.evaluationStatus.toLowerCase().includes(searchTerm.toLowerCase());
   
         if (filters.all) return matchesSearchTerm; 
   
@@ -152,7 +152,6 @@ const EvaluationReport = () => {
     };
   
     const openFilterPopup = () => {
-      console.log("popup filter click");
       setFilterPopup(true); 
     };
 
