@@ -94,8 +94,14 @@ const Table = ({ data, onRequestSort, sortConfig }) => {
                       : "expired"
                   }`}
                 >
-                  <span>{item.evaluationStatus}</span>
-                </td>
+              <span>
+                {item.evaluationStatus === "YET_TO_START"
+                  ? "YET TO START"
+                  : item.evaluationStatus === "IN_PROGRESS"
+                  ? "IN PROGRESS"
+                  : item.evaluationStatus}
+              </span>
+              </td>
               </tr>
             ))
           ) : (

@@ -40,11 +40,11 @@ const UploadBox = ({ onFileChange }) => {
           type="file"
           accept=".json"
           onChange={(e) => onFileChange(e.target.files[0])}
-          style={{ display: "none" }} // Hide the input
+          style={{ display: "none" }}
         />
         <label
           htmlFor="fileInput"
-          className="btn btn-default" // Custom button styling
+          className="btn btn-default"
         >
           Choose file from Computer
         </label>
